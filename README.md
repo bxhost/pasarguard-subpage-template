@@ -14,7 +14,7 @@
 1. копируем файл index.html
 2. в .env файле панели указываем CUSTOM_TEMPLATES_DIRECTORY и SUBSCRIPTION_PAGE_TEMPLATE
 3. Если CUSTOM_TEMPLATES_DIRECTORY отличается от /var/lib/pasarguard/*, то открываем docker-compose.yml и вписываем volumes: вашей директории
-4. в консоле ```bash pasarguard restart```
+4. в консоле ```pasarguard restart```
 
 ## Быстрая установка из GitHub
 
