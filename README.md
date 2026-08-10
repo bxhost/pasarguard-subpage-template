@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="README.md">🇮🇷 فارسی</a> ·
-  <a href="README.en.md">🇬🇧 English</a> ·
   <strong>🇷🇺 Русский</strong> ·
+  <a href="README.fa.md">🇮🇷 فارسی</a> ·
+  <a href="README.en.md">🇬🇧 English</a> ·
   <a href="README.zh.md">🇨🇳 中文</a>
 </p>
 
-# Неоновый шаблон PasarGuard
+# BT шаблон PasarGuard
 
 ## Быстрая установка из GitHub
 
@@ -13,15 +13,13 @@
 curl -fsSL https://raw.githubusercontent.com/7Berlin/pasarguard-neon-template/main/install.sh | sudo bash -s -- --activate
 ```
 
-Команда устанавливает и активирует шаблон только с **персидским языком**.
-
-![Английский предпросмотр шаблона](assets/preview.webp)
+Команда устанавливает и активирует шаблон только с **русским языком**.
 
 ## Команды установки
 
 | Команда | Описание |
 |---|---|
-| `sudo bash install.sh --activate` | Установка с персидским языком по умолчанию |
+| `sudo bash install.sh --activate` | Установка с русским языком по умолчанию |
 | `sudo bash install.sh --activate -fa -en` | Персидский и английский; персидский по умолчанию |
 | `sudo bash install.sh --activate -en -ru --default-lang en` | Английский и русский; английский по умолчанию |
 | `sudo bash install.sh --activate -fa -en -ru -zh` | Установка всех языков |
@@ -29,9 +27,9 @@ curl -fsSL https://raw.githubusercontent.com/7Berlin/pasarguard-neon-template/ma
 
 | Флаг | Язык |
 |---|---|
+| `-ru` | 🇷🇺 Русский |
 | `-fa` | 🇮🇷 Персидский |
 | `-en` | 🇬🇧 Английский |
-| `-ru` | 🇷🇺 Русский |
 | `-zh` | 🇨🇳 Китайский |
 
 ## Настройка шаблона

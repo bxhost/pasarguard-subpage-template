@@ -4,13 +4,13 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>/dev/null && pwd || pwd)"
 LOCAL_SOURCE_FILE="${SCRIPT_DIR}/index.html"
 LOCAL_CONFIG_FILE="${SCRIPT_DIR}/template.conf"
-DEST_DIR="/var/lib/pasarguard/templates/neon-subscription"
+DEST_DIR="/var/lib/pasarguard/templates/bxn"
 ENV_FILE="/opt/pasarguard/.env"
-REPOSITORY="7Berlin/pasarguard-neon-template"
+REPOSITORY="bxhost/pasarguard-subpage-template"
 VERSION="main"
 ACTIVATE=0
 LANG_SELECTION_EXPLICIT=0
-DEFAULT_LANG=""
+DEFAULT_LANG="ru"
 CONFIG_FILE=""
 LANGS=()
 TEMP_SOURCE=""
@@ -26,18 +26,18 @@ trap cleanup EXIT
 
 usage() {
   cat <<'TXT'
-PasarGuard Neon Template installer
+PasarGuard BT5.3 Template installer
 
 Usage:
   sudo bash install.sh [languages] [options]
 
 Languages:
+  -ru, --ru            Russian
   -fa, --fa            Persian
   -en, --en            English
-  -ru, --ru            Russian
   -zh, --zh            Chinese
 
-Default: Persian only.
+Default: Russian only.
 The first selected language is used as the default language.
 
 Options:
@@ -46,7 +46,7 @@ Options:
   --config FILE        Template configuration file
   --activate           Update PasarGuard .env and restart the panel
   --dest DIR           Destination directory
-  --env FILE           PasarGuard .env path
+  --env FILE           PasarGuard .env path, default: /opt/pasarguard/.env
   --version REF        Git branch, tag, or commit
   -h, --help           Show this help
 
@@ -88,9 +88,9 @@ select_language_flag() {
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
+    -ru|--ru) select_language_flag ru; shift ;;
     -fa|--fa) select_language_flag fa; shift ;;
     -en|--en) select_language_flag en; shift ;;
-    -ru|--ru) select_language_flag ru; shift ;;
     -zh|--zh) select_language_flag zh; shift ;;
     --lang)
       [[ $# -ge 2 ]] || { echo "Missing value for --lang" >&2; exit 1; }
@@ -136,7 +136,7 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ ${#LANGS[@]} -eq 0 ]]; then
-  LANGS=(fa)
+  LANGS=(ru)
 fi
 if [[ -z "$DEFAULT_LANG" ]]; then
   DEFAULT_LANG="${LANGS[0]}"
@@ -195,15 +195,15 @@ else
 fi
 
 # Defaults used when a value is missing from template.conf.
-BRAND_NAME="Space VPN"
+BRAND_NAME="BXN"
 BRAND_SUBTITLE=""
 LOGO_URL=""
 AVATAR_URL=""
 AVATAR_FILE=""
-PRIMARY_COLOR="#9a4dff"
-SECONDARY_COLOR="#d94dff"
-CYAN_COLOR="#20d8ff"
-DEFAULT_THEME="dark"
+PRIMARY_COLOR="#8ec971"
+SECONDARY_COLOR="#8ec971"
+CYAN_COLOR="#8ec971"
+DEFAULT_THEME="light"
 PANEL_DOMAIN=""
 SUPPORT_URL=""
 FLAG_CDN_BASE="https://flagcdn.com/w80"
