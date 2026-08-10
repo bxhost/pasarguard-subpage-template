@@ -1,42 +1,42 @@
 <p align="center">
-  <strong>🇮🇷 فارسی</strong> ·
+  <a href="README.md">🇮🇷 فارسی</a> ·
   <a href="README.en.md">🇬🇧 English</a> ·
-  <a href="README.ru.md">🇷🇺 Русский</a> ·
+  <strong>🇷🇺 Русский</strong> ·
   <a href="README.zh.md">🇨🇳 中文</a>
 </p>
 
-# قالب نئونی PasarGuard
+# Неоновый шаблон PasarGuard
 
-## نصب سریع از GitHub
+## Быстрая установка из GitHub
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/7Berlin/pasarguard-neon-template/main/install.sh | sudo bash -s -- --activate
 ```
 
-این دستور قالب را با **زبان فارسی** نصب و فعال می‌کند.
+Команда устанавливает и активирует шаблон только с **персидским языком**.
 
-![پیش‌نمایش انگلیسی قالب](assets/preview.webp)
+![Английский предпросмотр шаблона](assets/preview.webp)
 
-## دستورات نصب
+## Команды установки
 
-| دستور | توضیح |
+| Команда | Описание |
 |---|---|
-| `sudo bash install.sh --activate` | نصب با زبان پیش‌فرض فارسی |
-| `sudo bash install.sh --activate -fa -en` | نصب فارسی و انگلیسی؛ فارسی پیش‌فرض |
-| `sudo bash install.sh --activate -en -ru --default-lang en` | نصب انگلیسی و روسی؛ انگلیسی پیش‌فرض |
-| `sudo bash install.sh --activate -fa -en -ru -zh` | نصب همه زبان‌ها |
-| `sudo bash install.sh --activate --config ./template.conf` | نصب با فایل تنظیمات سفارشی |
+| `sudo bash install.sh --activate` | Установка с персидским языком по умолчанию |
+| `sudo bash install.sh --activate -fa -en` | Персидский и английский; персидский по умолчанию |
+| `sudo bash install.sh --activate -en -ru --default-lang en` | Английский и русский; английский по умолчанию |
+| `sudo bash install.sh --activate -fa -en -ru -zh` | Установка всех языков |
+| `sudo bash install.sh --activate --config ./template.conf` | Установка с пользовательской конфигурацией |
 
-| پرچم | زبان |
+| Флаг | Язык |
 |---|---|
-| `-fa` | 🇮🇷 فارسی |
-| `-en` | 🇬🇧 انگلیسی |
-| `-ru` | 🇷🇺 روسی |
-| `-zh` | 🇨🇳 چینی |
+| `-fa` | 🇮🇷 Персидский |
+| `-en` | 🇬🇧 Английский |
+| `-ru` | 🇷🇺 Русский |
+| `-zh` | 🇨🇳 Китайский |
 
-## تنظیم قالب
+## Настройка шаблона
 
-فایل `template.conf` را ویرایش و دوباره نصب را اجرا کنید:
+Измените `template.conf` и повторно запустите установку:
 
 ```bash
 git clone https://github.com/7Berlin/pasarguard-neon-template.git
@@ -45,17 +45,17 @@ nano template.conf
 sudo bash install.sh --activate --config ./template.conf
 ```
 
-| گزینه | کاربرد |
+| Параметр | Назначение |
 |---|---|
-| `BRAND_NAME` | نام سرویس |
-| `BRAND_SUBTITLE` | متن زیر نام کاربر |
-| `AVATAR_URL` | آدرس اینترنتی تصویر پروفایل یا لوگو |
-| `AVATAR_FILE` | مسیر فایل محلی PNG، JPG، WEBP، GIF یا SVG |
-| `PRIMARY_COLOR` | رنگ اصلی |
-| `SECONDARY_COLOR` | رنگ دوم |
-| `CYAN_COLOR` | رنگ مکمل |
-| `DEFAULT_THEME` | پوسته `dark` یا `light` |
-| `SUPPORT_URL` | لینک آموزش یا پشتیبانی |
-| `PANEL_DOMAIN` | دامنه پنل در صورت نیاز |
+| `BRAND_NAME` | Название сервиса |
+| `BRAND_SUBTITLE` | Текст под именем пользователя |
+| `AVATAR_URL` | URL изображения профиля или логотипа |
+| `AVATAR_FILE` | Локальный PNG, JPG, WEBP, GIF или SVG |
+| `PRIMARY_COLOR` | Основной цвет |
+| `SECONDARY_COLOR` | Второй цвет |
+| `CYAN_COLOR` | Акцентный цвет |
+| `DEFAULT_THEME` | Тема `dark` или `light` |
+| `SUPPORT_URL` | Ссылка на инструкцию или поддержку |
+| `PANEL_DOMAIN` | Домен панели при необходимости |
 
-برای حمایت از پروژه، به آن در GitHub ستاره بدهید ⭐
+Поддержите проект звездой на GitHub ⭐
