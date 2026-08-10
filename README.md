@@ -7,6 +7,8 @@
 
 # BT шаблон PasarGuard
 
+![Russian template preview](assets/preview.webp)
+
 ## Быстрая установка из GitHub
 
 ```bash
